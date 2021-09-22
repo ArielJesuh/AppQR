@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-content>
+    <ion-fab (click)="goHome()" vertical="top" horizontal="start" slot="fixed" >
+      <ion-fab-button>
+        <ion-icon name="chevron-back-circle"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
+
+  <ion-toolbar>
+    <ion-title>forgot-p</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="usuarioRecuperado" (ngSubmit)="grabar()">
+
+    
+    <ion-item fullscreen>
+      
+      <ion-label  expand="block" position="floating">Nombre</ion-label>
+      <ion-input type="text" formControlName="usuario"></ion-input>
+      
+    </ion-item>
+    
+    <ion-content fullscreen class="ion-padding">
+      <ion-button expand="block" color="dark" (click)="handleButtonClick()">RECUPERAR</ion-button>
+    </ion-content>
+ 
+  </form>
+
+</ion-content>
